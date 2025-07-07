@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Smartphone } from "lucide-react";
-import logo from "../assets/kartak2.png"; // Adjust the path as necessary
+import logo from "../assets/Kartak2.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
