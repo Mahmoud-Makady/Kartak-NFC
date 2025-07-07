@@ -1,7 +1,6 @@
-
-import { useState, useEffect } from 'react';
-import { Menu, X, Smartphone } from 'lucide-react';
-
+import { useState, useEffect } from "react";
+import { Menu, X, Smartphone } from "lucide-react";
+import logo from "../assets/kartak2.png"; // Adjust the path as necessary
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -10,37 +9,43 @@ const Navigation = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' }
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-kartak-dark/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-kartak-dark/95 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container-max section-padding">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-kartak-gold to-yellow-400 rounded-lg flex items-center justify-center">
+            {/* <div className="w-10 h-10 bg-gradient-to-br from-kartak-gold to-yellow-400 rounded-lg flex items-center justify-center">
               <Smartphone className="w-6 h-6 text-kartak-dark" />
-            </div>
+              
+            </div> */}
+            <img src={logo} width={70} alt="KARTAK Logo" />
             <span className="text-2xl font-bold gradient-text">KARTAK</span>
           </div>
 
