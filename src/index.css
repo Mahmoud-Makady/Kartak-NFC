@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 26 26 26; /* #1A1A1A */
+    --foreground: 212 32% 91%; /* Light gray text */
+
+    --card: 45 45 45; /* #2D2D2D */
+    --card-foreground: 212 32% 91%;
+
+    --popover: 45 45 45;
+    --popover-foreground: 212 32% 91%;
+
+    --primary: 45 74% 52%; /* Gold #D4AF37 */
+    --primary-foreground: 26 26 26;
+
+    --secondary: 45 45 45;
+    --secondary-foreground: 212 32% 91%;
+
+    --muted: 74 74 74; /* #4A4A4A */
+    --muted-foreground: 212 32% 71%;
+
+    --accent: 45 74% 52%;
+    --accent-foreground: 26 26 26;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 212 32% 91%;
+
+    --border: 74 74 74;
+    --input: 74 74 74;
+    --ring: 45 74% 52%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-kartak-dark text-white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-kartak-gold to-yellow-400 bg-clip-text text-transparent;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-kartak-gold/20;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-kartak-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-kartak-gold rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-yellow-400;
+}
