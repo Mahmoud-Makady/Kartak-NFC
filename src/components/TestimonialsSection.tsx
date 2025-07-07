@@ -1,45 +1,51 @@
-
-import { Star, Quote } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Star, Quote } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import khaledImg from "../assets/khaled.png";
+import alyaaImg from "../assets/alyaa.png";
+import mahmoudImg from "../assets/mahmoud.jpg";
+import ahmedImg from "../assets/ahmed.jpg";
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: 'Ahmed Mahmoud',
-      position: 'Business Development Manager',
-      company: 'Advanced Technologies Inc.',
+      name: "Ahmed Mahmoud",
+      position: "Business Development Manager",
+      company: "Advanced Technologies Inc.",
       rating: 5,
-      text: 'Amazing experience with Kartak! Excellent quality and fast service. Connecting with clients has become much easier.',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+      text: "Amazing experience with Kartak! Excellent quality and fast service. Connecting with clients has become much easier.",
+      avatar: ahmedImg,
     },
     {
-      name: 'Sarah Johnson',
-      position: 'Graphic Designer',
-      company: 'Creative Studio',
-      rating: 5,
-      text: 'Stunning card with modern and elegant design. It helped me a lot in showcasing my work to clients professionally.',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616c886a3b6?w=150&h=150&fit=crop&crop=face'
+      name: "Khaled Al Nahyan",
+      position: "Marketing Executive",
+      company: "Emirates Media Hub",
+      rating: 4,
+      text: "A sleek and modern card design that truly impressed my clients. It made presenting my work much more professional and impactful.",
+      avatar: khaledImg,
     },
     {
-      name: 'Michael Brown',
-      position: 'Entrepreneur',
-      company: 'Innovation Company Founder',
+      name: "Mahmoud Makady",
+      position: "Front-End Developer",
+      company: "Astral-Code",
       rating: 5,
-      text: 'Excellent investment! Saved me a lot of time and effort. The technology is modern and very easy to use.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      text: "Excellent investment! Saved me a lot of time and effort. The technology is modern and very easy to use.",
+      avatar: mahmoudImg,
     },
     {
-      name: 'Emily Davis',
-      position: 'App Developer',
-      company: 'Tech Solutions',
+      name: "Alya Al Mansoori",
+      position: "HR Specialist",
+      company: "Emirates Business Solutions",
       rating: 5,
-      text: 'Great product with high quality. Professional team and excellent technical support. I recommend everyone to try it.',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
-    }
+      text: "Excellent service and a highly professional team. The process was smooth, and the support was prompt and effective. I highly recommend it.",
+      avatar: alyaaImg,
+    },
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-kartak-gray to-kartak-dark">
+    <section
+      id="testimonials"
+      className="py-20 bg-gradient-to-b from-kartak-gray to-kartak-dark"
+    >
       <div className="container-max section-padding">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -52,7 +58,7 @@ const TestimonialsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card 
+            <Card
               key={index}
               className={`bg-kartak-dark border-kartak-light-gray hover-glow group animate-scale-in`}
               style={{ animationDelay: `${index * 0.15}s` }}
@@ -66,7 +72,10 @@ const TestimonialsSection = () => {
                 {/* Rating Stars */}
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-kartak-gold fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-kartak-gold fill-current"
+                    />
                   ))}
                 </div>
 
@@ -77,8 +86,8 @@ const TestimonialsSection = () => {
 
                 {/* Customer Info */}
                 <div className="flex items-center">
-                  <img 
-                    src={testimonial.avatar} 
+                  <img
+                    src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-14 h-14 rounded-full object-cover border-2 border-kartak-gold mr-4"
                   />
@@ -102,18 +111,20 @@ const TestimonialsSection = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { number: '500+', label: 'Happy Clients' },
-            { number: '1000+', label: 'Cards Produced' },
-            { number: '50+', label: 'Trusted Companies' },
-            { number: '24/7', label: 'Technical Support' }
+            { number: "80+", label: "Happy Clients" },
+            { number: "100+", label: "Cards Produced" },
+            { number: "20+", label: "Trusted Companies" },
+            { number: "24/7", label: "Technical Support" },
           ].map((stat, index) => (
-            <div key={index} className="animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div
+              key={index}
+              className="animate-slide-in-left"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-400">
-                {stat.label}
-              </div>
+              <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>

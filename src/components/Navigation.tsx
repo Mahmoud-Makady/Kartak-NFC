@@ -41,11 +41,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            {/* <div className="w-10 h-10 bg-gradient-to-br from-kartak-gold to-yellow-400 rounded-lg flex items-center justify-center">
-              <Smartphone className="w-6 h-6 text-kartak-dark" />
-              
-            </div> */}
-            <img src={logo} width={70} alt="KARTAK Logo" />
+            <img src={logo} width={60} alt="KARTAK Logo" />
             <span className="text-2xl font-bold gradient-text">KARTAK</span>
           </div>
 

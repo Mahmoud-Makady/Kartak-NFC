@@ -1,17 +1,20 @@
-
-import { ArrowDown, Smartphone, Wifi, Share2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ArrowDown, Smartphone, Wifi, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import logo from "../../public/kartak.png"; // Adjust the path as necessary
 
 const HeroSection = () => {
   const scrollToServices = () => {
-    const element = document.querySelector('#services');
+    const element = document.querySelector("#services");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-32 h-32 border-2 border-kartak-gold/20 rotate-45 animate-pulse"></div>
@@ -24,7 +27,8 @@ const HeroSection = () => {
           {/* Logo/Icon */}
           <div className="mb-8 flex justify-center">
             <div className="w-24 h-24 bg-gradient-to-br from-kartak-gold to-yellow-400 rounded-2xl flex items-center justify-center animate-glow">
-              <Smartphone className="w-12 h-12 text-kartak-dark" />
+              {/* <Smartphone className="w-12 h-12 text-kartak-dark" /> */}
+              <img src={logo} alt="KARTAK Logo" className="w-20 h-20" />
             </div>
           </div>
 
@@ -39,7 +43,9 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             The future of digital networking in one card
             <br />
-            <span className="text-kartak-gold">Share your information with just one tap</span>
+            <span className="text-kartak-gold">
+              Share your information with just one tap
+            </span>
           </p>
 
           {/* Features Icons */}
@@ -76,7 +82,7 @@ const HeroSection = () => {
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="arrow absolute bottom-10 transform -translate-x-1/2 animate-bounce">
             <ArrowDown className="w-6 h-6 text-kartak-gold" />
           </div>
         </div>
