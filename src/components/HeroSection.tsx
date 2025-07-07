@@ -1,6 +1,6 @@
 import { ArrowDown, Smartphone, Wifi, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "../../public/kartak.png"; // Adjust the path as necessary
+import logo from "../assets/Kartak.png"; // Adjust the path as necessary
 
 const HeroSection = () => {
   const scrollToServices = () => {
