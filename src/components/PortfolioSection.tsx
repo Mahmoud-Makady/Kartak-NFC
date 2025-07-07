@@ -1,34 +1,42 @@
-
-import { ExternalLink, Users, Building, Heart } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { ExternalLink, Users, Building, Heart } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const PortfolioSection = () => {
   const portfolioItems = [
     {
-      title: 'Golden Business Card',
-      category: 'Business',
-      description: 'Elegant and distinctive design for professionals and business people',
+      title: "Golden Business Card",
+      category: "Business",
+      description:
+        "Elegant and distinctive design for professionals and business people",
       icon: Building,
-      image: '/lovable-uploads/e34b2aef-67b9-4382-bfbc-117d1c8ff76b.png',
-      features: ['Company information', 'Contact details', 'Professional accounts']
+      image: "/e34b2aef-67b9-4382-bfbc-117d1c8ff76b.png",
+      features: [
+        "Company information",
+        "Contact details",
+        "Professional accounts",
+      ],
     },
     {
-      title: 'Personal Card for Creatives',
-      category: 'Personal',
-      description: 'Perfect for artists and creatives to showcase their work',
+      title: "Personal Card for Creatives",
+      category: "Personal",
+      description: "Perfect for artists and creatives to showcase their work",
       icon: Heart,
-      image: '/lovable-uploads/e34b2aef-67b9-4382-bfbc-117d1c8ff76b.png',
-      features: ['Portfolio gallery', 'Creative accounts', 'Personal information']
+      image: "/e34b2aef-67b9-4382-bfbc-117d1c8ff76b.png",
+      features: [
+        "Portfolio gallery",
+        "Creative accounts",
+        "Personal information",
+      ],
     },
     {
-      title: 'Events & Occasions Card',
-      category: 'Events',
-      description: 'Ideal solution for major events and conferences',
+      title: "Events & Occasions Card",
+      category: "Events",
+      description: "Ideal solution for major events and conferences",
       icon: Users,
-      image: '/lovable-uploads/e34b2aef-67b9-4382-bfbc-117d1c8ff76b.png',
-      features: ['Event details', 'Schedules', 'Location maps']
-    }
+      image: "/e34b2aef-67b9-4382-bfbc-117d1c8ff76b.png",
+      features: ["Event details", "Schedules", "Location maps"],
+    },
   ];
 
   return (
@@ -39,20 +47,21 @@ const PortfolioSection = () => {
             <span className="gradient-text">Our Work</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            A collection of our distinguished projects that we are proud to deliver to our clients
+            A collection of our distinguished projects that we are proud to
+            deliver to our clients
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
-            <Card 
+            <Card
               key={index}
               className={`bg-kartak-gray border-kartak-light-gray hover-glow overflow-hidden group animate-slide-in-left`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={item.image} 
+                <img
+                  src={item.image}
                   alt={item.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -63,33 +72,36 @@ const PortfolioSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <CardContent className="p-6">
                 <div className="mb-4">
                   <span className="text-sm text-kartak-gold font-medium bg-kartak-gold/10 px-3 py-1 rounded-full">
                     {item.category}
                   </span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-kartak-gold transition-colors duration-300">
                   {item.title}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {item.description}
                 </p>
-                
+
                 <ul className="space-y-2 mb-6">
                   {item.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-400 text-sm">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-400 text-sm"
+                    >
                       <div className="w-1.5 h-1.5 bg-kartak-gold rounded-full mr-2"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  variant="outline" 
+
+                <Button
+                  variant="outline"
                   className="w-full border-kartak-gold text-kartak-gold hover:bg-kartak-gold hover:text-kartak-dark transition-all duration-300"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />

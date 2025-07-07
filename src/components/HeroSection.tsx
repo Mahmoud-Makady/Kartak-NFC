@@ -1,6 +1,6 @@
 import { ArrowDown, Smartphone, Wifi, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "../assets/Kartak.png"; // Adjust the path as necessary
+import logo from "../assets/Kartak.png";
 
 const HeroSection = () => {
   const scrollToServices = () => {
@@ -15,7 +15,6 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-32 h-32 border-2 border-kartak-gold/20 rotate-45 animate-pulse"></div>
         <div className="absolute bottom-32 left-16 w-24 h-24 border-2 border-kartak-gold/30 rotate-12 animate-pulse delay-500"></div>
@@ -24,22 +23,18 @@ const HeroSection = () => {
 
       <div className="container-max section-padding text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          {/* Logo/Icon */}
           <div className="mb-8 flex justify-center">
             <div className="w-24 h-24 bg-gradient-to-br from-kartak-gold to-yellow-400 rounded-2xl flex items-center justify-center animate-glow">
-              {/* <Smartphone className="w-12 h-12 text-kartak-dark" /> */}
               <img src={logo} alt="KARTAK Logo" className="w-20 h-20" />
             </div>
           </div>
 
-          {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="gradient-text">KARTAK</span>
             <br />
             <span className="text-white">Smart Cards</span>
           </h1>
 
-          {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             The future of digital networking in one card
             <br />
@@ -48,7 +43,6 @@ const HeroSection = () => {
             </span>
           </p>
 
-          {/* Features Icons */}
           <div className="flex justify-center items-center space-x-8 mb-12 animate-slide-in-left">
             <div className="flex flex-col items-center space-y-2">
               <div className="w-16 h-16 bg-kartak-gray rounded-full flex items-center justify-center hover-glow">
@@ -70,7 +64,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
           <div className="animate-slide-in-right">
             <Button
               onClick={scrollToServices}
@@ -81,7 +74,6 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Scroll Indicator */}
           <div className="arrow absolute bottom-10 transform -translate-x-1/2 animate-bounce">
             <ArrowDown className="w-6 h-6 text-kartak-gold" />
           </div>

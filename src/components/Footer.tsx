@@ -7,7 +7,7 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
-import logo from "../../public/kartak.png";
+import logo from "../assets/Kartak.png";
 
 const Footer = () => {
   // const socialLinks = [
@@ -36,11 +36,9 @@ const Footer = () => {
     <footer className="bg-gradient-to-b from-kartak-dark to-black text-white">
       <div className="container-max section-padding py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-kartak-gold to-yellow-400 rounded-lg flex items-center justify-center">
-                {/* <Smartphone className="w-6 h-6 text-kartak-dark" /> */}
                 <img src={logo} alt="KARTAK Logo" className="w-12 h-12" />
               </div>
               <span className="text-3xl font-bold gradient-text">KARTAK</span>
@@ -66,7 +64,6 @@ const Footer = () => {
             </div> */}
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-kartak-gold">
               Quick Links
@@ -85,7 +82,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-kartak-gold">
               Contact Us
@@ -110,7 +106,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-kartak-gray">
         <div className="container-max section-padding py-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">

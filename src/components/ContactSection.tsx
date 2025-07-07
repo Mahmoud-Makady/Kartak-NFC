@@ -68,7 +68,6 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
           <div className="animate-slide-in-left">
             <h3 className="text-2xl font-bold text-white mb-8">
               Contact Information
@@ -106,7 +105,6 @@ const ContactSection = () => {
               ))}
             </div>
 
-            {/* Location Info */}
             <Card className="bg-gradient-to-br from-kartak-gray to-kartak-light-gray border-kartak-gold/20">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
@@ -120,7 +118,6 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          {/* Why Choose Us */}
           <div className="animate-slide-in-right">
             <h3 className="text-2xl font-bold text-white mb-8">
               Why Choose Us?

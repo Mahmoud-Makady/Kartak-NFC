@@ -64,12 +64,10 @@ const TestimonialsSection = () => {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <CardContent className="p-8 relative">
-                {/* Quote Icon */}
                 <div className="absolute top-6 right-6 opacity-20">
                   <Quote className="w-12 h-12 text-kartak-gold" />
                 </div>
 
-                {/* Rating Stars */}
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
@@ -79,12 +77,10 @@ const TestimonialsSection = () => {
                   ))}
                 </div>
 
-                {/* Testimonial Text */}
                 <p className="text-gray-300 text-lg leading-relaxed mb-6 relative z-10">
                   "{testimonial.text}"
                 </p>
 
-                {/* Customer Info */}
                 <div className="flex items-center">
                   <img
                     src={testimonial.avatar}
@@ -108,7 +104,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { number: "80+", label: "Happy Clients" },

@@ -39,13 +39,11 @@ const Navigation = () => {
     >
       <div className="container-max section-padding">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src={logo} width={60} alt="KARTAK Logo" />
             <span className="text-2xl font-bold gradient-text">KARTAK</span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -58,7 +56,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white hover:text-kartak-gold transition-colors"
@@ -67,7 +64,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-kartak-dark/95 backdrop-blur-lg border-t border-kartak-gray animate-fade-in">
             <div className="section-padding py-4">
