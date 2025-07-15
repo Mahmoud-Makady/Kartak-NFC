@@ -6,16 +6,21 @@ import {
   Linkedin,
   Mail,
   Phone,
+  Target,
 } from "lucide-react";
 import logo from "../assets/Kartak.png";
 
 const Footer = () => {
-  // const socialLinks = [
-  //   { icon: Facebook, href: '#', label: 'Facebook' },
-  //   { icon: Twitter, href: '#', label: 'Twitter' },
-  //   { icon: Instagram, href: '#', label: 'Instagram' },
-  //   { icon: Linkedin, href: '#', label: 'LinkedIn' }
-  // ];
+  const socialLinks = [
+    // { icon: Facebook, href: "#", label: "Facebook" },
+    // { icon: Twitter, href: "#", label: "Twitter" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/kartak_nfc/",
+      label: "Instagram",
+    },
+    // { icon: Linkedin, href: "#", label: "LinkedIn" },
+  ];
 
   const quickLinks = [
     { label: "Home", href: "#home" },
@@ -50,18 +55,19 @@ const Footer = () => {
               easily and elegantly.
             </p>
 
-            {/* <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
                   className="w-10 h-10 bg-kartak-gray rounded-full flex items-center justify-center hover:bg-kartak-gold hover:text-kartak-dark transition-all duration-300 transform hover:scale-110"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-            </div> */}
+            </div>
           </div>
 
           <div>
